@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Alber Ruiz Clemente
+Curso: DAW1
+Fecha: 27-03-2025
+Ejercicio: Equipos NBA
+-->
+<!DOCTYPE EquiposNBA [
+    <!ELEMENT EquiposNBA (equipo+, nombre+)>
+
+    <!ELEMENT equipo (titulos, posicion, quintetoTitular)>
+    <!ATTLIST equipo
+    conferencia CDATA #REQUIRED>
+    <!ELEMENT titulos (#PCDATA)>
+    <!ELEMENT posicion (#PCDATA)>
+    <!ELEMENT quintetoTitular (#PCDATA)>
+
+    <!ELEMENT nombre (nombreEquipo)>
+    <!ELEMENT nombreEquipo (#PCDATA)>
+]>
+<EquiposNBA>
+    <equipo conferencia="">
+        <titulos/>
+        <posicion/>
+        <quintetoTitular/>
+    </equipo>
+    <nombre>
+        <nombreEquipo/>
+    </nombre>
+</EquiposNBA>

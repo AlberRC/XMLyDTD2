@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Alber Ruiz Clemente
+Curso: DAW1
+Fecha: 27-03-2025
+Ejercicio: Factura Electrónica
+-->
+<!DOCTYPE factura [
+    <!ELEMENT factura (datos-emisor, datos-cliente, detalle-factura)>
+    <!ATTLIST factura 
+    numero CDATA #REQUIRED
+    fecha CDATA #REQUIRED>
+
+    <!ELEMENT datos-emisor (nombreDatos-Emisor, cifDatos-Emisor, telefonoDatos-Emisor)>
+    <!ELEMENT nombreDatos-Emisor (#PCDATA)>
+    <!ELEMENT cifDatos-Emisor (#PCDATA)>
+    <!ELEMENT telefonoDatos-Emisor (#PCDATA)>
+
+    <!ELEMENT datos-cliente (nombreDatos-Cliente, cifDatos-Cliente, telefonoDatos-Cliente)>
+    <!ELEMENT nombreDatos-Cliente (#PCDATA)>
+    <!ELEMENT cifDatos-Cliente (#PCDATA)>
+    <!ELEMENT telefonoDatos-Cliente (#PCDATA)>
+
+    <!ELEMENT detalle-factura (linea+)>
+    <!ATTLIST detalle-factura 
+    importe CDATA #REQUIRED>
+    
+    <!ELEMENT linea (descripcion, cantidad, pvp, oferta?)>
+    <!ATTLIST linea 
+    codigo-articulo ID #REQUIRED
+    tipo (Libro|DVD|Varios) #REQUIRED>
+    
+    <!ELEMENT descripcion (#PCDATA)>
+    <!ELEMENT cantidad (#PCDATA)>
+    <!ELEMENT pvp (#PCDATA)>
+    <!ELEMENT oferta (#PCDATA)>
+]>
+<factura numero="" fecha="">
+    <datos-emisor>
+        <nombreDatos-Emisor/>
+        <cifDatos-Emisor/>
+        <telefonoDatos-Emisor/>
+    </datos-emisor>
+    <datos-cliente>
+        <nombreDatos-Cliente/>
+        <cifDatos-Cliente/>
+        <telefonoDatos-Cliente/>
+    </datos-cliente>
+    <detalle-factura importe="">
+        <linea codigo-articulo="" tipo="">
+            <descripcion/>
+            <cantidad/>
+            <pvp/>
+            <oferta/>
+        </linea>
+        <linea codigo-articulo="" tipo="">
+            <descripcion/>
+            <cantidad/>
+            <pvp/>
+            <oferta/>
+        </linea>
+    </detalle-factura>
+</factura>

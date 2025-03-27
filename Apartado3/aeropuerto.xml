@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Nombre: Alber Ruiz Clemente
+Curso: DAW1
+Fecha: 27-03-2025
+Ejercicio: Aeropuerto
+-->
+<!DOCTYPE aeropuerto SYSTEM "aeropuerto.dtd">
+<aeropuerto>
+    <nombreAeropuerto/>
+    <datosVuelo codigo="" estado="">
+        <diario/>
+        <origen/>
+        <destino/>
+        <horaSalida/>
+        <horaLlegada/>
+    </datosVuelo>
+    <fechaPanel/>
+</aeropuerto>
